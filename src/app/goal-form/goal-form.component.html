@@ -1,7 +1,8 @@
 <div class="container-fluid">
   <h2 class="text-center">Create a New Goal</h2>
   <hr>
-  <form #goalForm='ngForm'> <!--Provide additional feature and monitor changes and validity of input elements-->
+  <form (ngSubmit)='submitGoal()' #goalForm='ngForm'> <!--Provide additional feature and monitor changes and validity of input elements-->
+    {{ goalForm | json}}
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" id="name" class="form-control" required [(ngModel)] = 'newGoal.name' #name='ngModel' name="name">
@@ -22,5 +23,6 @@
         <p>Date is required</p>
       </div>
     </div>
+    <input type="submit" value="Submit">
   </form>
 </div>
