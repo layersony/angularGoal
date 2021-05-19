@@ -6,7 +6,7 @@
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" id="name" class="form-control" required [(ngModel)] = 'newGoal.name' #name='ngModel' name="name">
-      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+      <div [hidden]="name.valid || name.pristine " class="alert alert-danger">
         <p>Name is required</p>
       </div>
     </div>

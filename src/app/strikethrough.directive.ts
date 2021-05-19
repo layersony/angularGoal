@@ -1,4 +1,5 @@
-import { Directive,ElementRef, HostListener } from '@angular/core';
+// manipulate DOM
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appStrikethrough]'

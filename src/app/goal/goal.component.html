@@ -1,4 +1,5 @@
 <div class="container">
+  <!-- <ng-progress></ng-progress> -->
   <h1>My Goals</h1>
   <hr>
 
@@ -11,14 +12,21 @@
         </div>
 
         <div *ngIf='goal.showDescription'>
-          <app-goal-detail  [goal]='goal' (isComplete) = 'deleteGoal($event,i)'></app-goal-detail>
+          <app-goal-detail [goal]='goal' (isComplete)='deleteGoal($event,i)'></app-goal-detail>
         </div>
       </div>
     </div>
+
     <div class="col-md-6">
       <app-goal-form (addGoal)="addNewGoal($event)"></app-goal-form>
     </div>
   </div>
 
   <p *ngIf='goals.length > 5'>You have too many goals</p>
+  <div class="row">
+    <blockquote class="blockquote text-center">
+      <p>{{quote.quote}}</p> <!--quote-->
+      <footer class="blockquote-footer"><cite>{{quote.author}}</cite></footer>
+    </blockquote>
+  </div>
 </div>
